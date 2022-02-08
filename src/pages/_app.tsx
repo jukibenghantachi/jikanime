@@ -1,6 +1,4 @@
 import { Navbar } from '../components';
-import { Provider } from 'react-redux';
-import store from '../redux/store';
 import '../assets/css/tailwind.css';
 
 function Components({ Component, pageProps }) {
@@ -14,12 +12,6 @@ function Components({ Component, pageProps }) {
     );
 }
 
-function Lunacle({ Component, pageProps }) {
-    return (
-        <Provider store={store}>
-            <Components Component={Component} pageProps={pageProps} />
-        </Provider>
-    );
+export default function Lunacle({ Component, pageProps }) {
+    return <Components Component={Component} pageProps={pageProps} />;
 }
-
-export default Lunacle;
