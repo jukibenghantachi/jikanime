@@ -1,11 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Card, CardLoading } from '../components';
 import { fetch } from '../utils/fetch';
-import axios from 'axios';
 
-function Home() {
-    let [newAnime, setNewAnime] = useState({ data: [] });
-    let [latestUpdated, setLatestUpdated] = useState({ data: [] });
+export default function Home() {
+    let [newAnime, setNewAnime]: any = useState();
+    let [latestUpdated, setLatestUpdated]: any = useState();
 
     const fetchNewAnime = async () => {
         let res = await fetch('https://api.jikan.moe/v4/seasons/2022/winter');
@@ -42,5 +41,3 @@ function Home() {
         </div>
     );
 }
-
-export default Home;
