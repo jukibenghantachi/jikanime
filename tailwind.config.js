@@ -8,5 +8,11 @@ module.exports = {
             },
         },
     },
-    plugins: ['@tailwindcss/line-clamp'],
+    plugins: [
+        /**
+         * Support multiline truncate
+         * https://github.com/tailwindlabs/tailwindcss/discussions/1826#discussioncomment-18805
+         */
+        require('@tailwindcss/line-clamp'),
+    ],
 };
