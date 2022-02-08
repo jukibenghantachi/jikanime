@@ -8,9 +8,11 @@ function Card({ type, data }) {
                     <Image
                         src={data.images.webp.large_image_url}
                         alt={data.title}
-                        className="duration-50 h-48 w-32 rounded-md object-cover transition group-active:scale-95"
+                        width={128}
+                        height={192}
+                        className="duration-50 rounded-md object-cover transition group-active:scale-95"
                     />
-                    <div className="mt-2 group-hover:text-[#2c54a4]">
+                    <div className="group-hover:text-[#2c54a4]">
                         <p className="font-medium line-clamp-2">{data.title}</p>
                         <p className="text-sm text-gray-500">{data.genres[0].name}</p>
                     </div>
@@ -23,9 +25,11 @@ function Card({ type, data }) {
                         <Image
                             src={data.entry.images.webp.large_image_url}
                             alt={data.entry.title}
-                            className="duration-50 h-48 w-32 rounded-md object-cover transition group-active:scale-95"
+                            width={128}
+                            height={192}
+                            className="duration-50 rounded-md object-cover transition group-active:scale-95"
                         />
-                        <div className="mt-2 group-hover:text-[#2c54a4]">
+                        <div className="group-hover:text-[#2c54a4]">
                             <p className="font-medium line-clamp-2">{data.entry.title}</p>
                             <p className="text-sm text-gray-500">{data.episodes[0].title}</p>
                         </div>
