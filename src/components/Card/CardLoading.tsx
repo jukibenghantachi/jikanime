@@ -1,4 +1,4 @@
-function CardLoading() {
+export default function CardLoading() {
     return (
         <div className="w-32 animate-pulse">
             <div className="duration-50 h-48 w-32 rounded-md bg-gray-200/90 object-cover transition group-active:scale-95" />
@@ -9,5 +9,3 @@ function CardLoading() {
         </div>
     );
 }
-
-export default CardLoading;

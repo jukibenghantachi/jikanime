@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-function Card({ type, data }) {
+export default function Card({ type, data }) {
     switch (type) {
         case 'New Anime':
             return (
@@ -43,5 +43,3 @@ function Card({ type, data }) {
             break;
     }
 }
-
-export default Card;

@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '../../assets/img/logo.png';
 
-const Navbar = () => {
+export default function Navbar() {
     const routerList = [
         {
             name: 'Home',
@@ -37,6 +37,4 @@ const Navbar = () => {
             </div>
         </nav>
     );
-};
-
-export default Navbar;
+}
