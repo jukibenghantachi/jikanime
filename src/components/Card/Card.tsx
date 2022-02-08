@@ -5,7 +5,7 @@ function Card({ type, data }) {
     switch (type) {
         case 'New Anime':
             return (
-                <Link href={'details' + data.mal_id} passHref>
+                <Link href={'details/' + data.mal_id} passHref>
                     <div className="group w-32 cursor-pointer">
                         <Image
                             src={data.images.webp.large_image_url}
