@@ -10,7 +10,10 @@ export default function Footer() {
                     <p>Jikanime</p>
                 </div>
                 <div className="text-xs text-[#2c54a4]/80 hover:text-[#2c54a4]">
-                    <a href="https://github.com/jukibenghantachi/jikanime" target="_blank">
+                    <a
+                        href="https://github.com/jukibenghantachi/jikanime"
+                        rel="noreferrer"
+                        target="_blank">
                         <svg
                             role="img"
                             viewBox="0 0 24 24"
