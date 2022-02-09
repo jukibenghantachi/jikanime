@@ -6,7 +6,6 @@ import DetailsComponentManga from './DetailsManga/DetailsComponent';
 import DetailsComponentMangaLoading from './DetailsManga/DetailsComponentLoading';
 import Footer from './Footer/Footer';
 import Navbar from './Navbar/Navbar';
-import SEO from './SEO/SEO';
 
 export {
     Card,
@@ -17,5 +16,4 @@ export {
     DetailsComponentMangaLoading,
     Footer,
     Navbar,
-    SEO,
 };

@@ -1,5 +1,5 @@
+import { NextSeo } from 'next-seo';
 import Image from 'next/image';
-import { SEO } from '..';
 
 export default function DetailsComponentAnime({ data }) {
     const loopValue = (name) => {
@@ -55,11 +55,21 @@ export default function DetailsComponentAnime({ data }) {
 
     return (
         <div>
-            <SEO
-                title={data.title}
-                url={'details/anime/' + data.mal_id}
+            <NextSeo
+                title={data.title + ' - Jikanime'}
                 description={data.synopsis}
-                image={data.images.webp.large_image_url}
+                openGraph={{
+                    url: `https://jikanime.vercel.app/details/anime/${data.mal_id}`,
+                    title: `${data.title} - Jikanime`,
+                    description: data.synopsis,
+                    images: [{ url: data.images.webp.large_image_url }],
+                    site_name: 'Jikanime',
+                }}
+                twitter={{
+                    handle: '@handle',
+                    site: '@site',
+                    cardType: 'summary_large_image',
+                }}
             />
             <div className="flex justify-center">
                 <Image

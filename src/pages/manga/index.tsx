@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
-import { Card, CardLoading, SEO } from '../../components';
+import { NextSeo } from 'next-seo';
+import { Card, CardLoading } from '../../components';
 import { fetch } from '../../utils/fetch';
 
 export default function Home() {
@@ -16,11 +17,21 @@ export default function Home() {
 
     return (
         <div>
-            <SEO
-                title="Manga"
-                url="https://jikanime.vercel.app"
+            <NextSeo
+                title="Manga - Jikanime"
                 description="MyAnimeList - Minimal UI"
-                image="https://jikan.moe/assets/images/logo/jikan.logo.png"
+                openGraph={{
+                    url: 'https://jikanime.vercel.app',
+                    title: 'Manga - Jikanime',
+                    description: 'MyAnimeList - Minimal UI',
+                    images: [{ url: 'https://jikan.moe/assets/images/logo/jikan.logo.png' }],
+                    site_name: 'Jikanime',
+                }}
+                twitter={{
+                    handle: '@handle',
+                    site: '@site',
+                    cardType: 'summary_large_image',
+                }}
             />
             <h1 className="my-5 text-2xl font-medium text-gray-800">Top Manga</h1>
             <div className="my-3 flex flex-wrap justify-between gap-5">
