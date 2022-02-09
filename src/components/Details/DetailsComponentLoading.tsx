@@ -2,7 +2,7 @@ export default function DetailsComponentLoading() {
     return (
         <div className="animate-pulse">
             <div className="flex justify-center">
-                <div className="h-72 w-52 rounded-md bg-gray-200/90" />
+                <div className="h-56 w-44 rounded-md bg-gray-200/90" />
             </div>
             <div className="mt-3 mb-1 flex items-center justify-center">
                 <div className="h-5 w-96 rounded-md bg-gray-200/90" />
