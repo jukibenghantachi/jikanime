@@ -14,7 +14,7 @@ export default function Navbar() {
         },
         {
             name: 'Manga',
-            route: '/about',
+            route: '/manga',
         },
     ];
 
