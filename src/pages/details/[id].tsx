@@ -17,7 +17,7 @@ export default function Details() {
         // https://github.com/vercel/next.js/discussions/11484#discussioncomment-356055
         if (!isReady) return;
         fetch(`https://api.jikan.moe/v4/anime/${query.id}`);
-    }, [isReady]);
+    }, [query, isReady]);
 
     return <div>{details ? <DetailsComponent data={details} /> : <DetailsComponentLoading />}</div>;
 }
