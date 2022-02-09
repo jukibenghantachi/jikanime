@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function DetailsComponent({ data }) {
+export default function DetailsComponentAnime({ data }) {
     const loopValue = (name) => {
         return data[name].map((x) => x.name);
     };

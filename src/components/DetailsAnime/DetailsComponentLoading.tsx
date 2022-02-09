@@ -1,4 +1,4 @@
-export default function DetailsComponentLoading() {
+export default function DetailsComponentAnimeLoading() {
     return (
         <div className="animate-pulse">
             <div className="flex justify-center">
