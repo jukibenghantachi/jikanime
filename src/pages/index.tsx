@@ -6,10 +6,40 @@ export default function Home() {
     let [newAnime, setNewAnime]: any = useState();
     let [latestUpdated, setLatestUpdated]: any = useState();
 
+    let date = new Date();
+    let season: string;
+    let year: string = date.getFullYear().toString();
+    let month: number = date.getMonth();
+
     const fetchNewAnime = async () => {
-        let res = await fetch('https://api.jikan.moe/v4/seasons/2022/winter');
+        /**
+         * Anime Season Date:
+         * Winter — January to March
+         * Spring — April to June
+         * Summer — July to September
+         * Fall   — October to December
+         */
+        switch (month) {
+            case 0 || 1 || 2:
+                season = 'winter';
+                break;
+            case 3 || 4 || 5:
+                season = 'spring';
+                break;
+            case 6 || 7 || 8:
+                season = 'summer';
+                break;
+            case 9 || 10 || 11:
+                season = 'fall';
+                break;
+            default:
+                season = 'winter';
+                break;
+        }
+        let res = await fetch(`https://api.jikan.moe/v4/seasons/${year}/${season}`);
         setNewAnime(res);
     };
+
     const fetchLatestUpdated = async () => {
         let res = await fetch('https://api.jikan.moe/v4/watch/episodes');
         setLatestUpdated(res);
