@@ -1,4 +1,4 @@
-import { Navbar } from '../components';
+import { Footer, Navbar } from '../components';
 import '../assets/css/tailwind.css';
 
 function Components({ Component, pageProps }) {
@@ -8,6 +8,7 @@ function Components({ Component, pageProps }) {
             <div className="my-20 mx-12">
                 <Component {...pageProps} />
             </div>
+            <Footer />
         </div>
     );
 }
