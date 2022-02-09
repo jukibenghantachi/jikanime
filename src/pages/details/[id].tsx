@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { DetailsComponent } from '../../components';
+import { DetailsComponent, DetailsComponentLoading } from '../../components';
 import axios from 'axios';
 
 export default function Details() {
@@ -19,5 +19,5 @@ export default function Details() {
         fetch(`https://api.jikan.moe/v4/anime/${query.id}`);
     }, [isReady]);
 
-    return <div>{details ? <DetailsComponent data={details} /> : null}</div>;
+    return <div>{details ? <DetailsComponent data={details} /> : <DetailsComponentLoading />}</div>;
 }
