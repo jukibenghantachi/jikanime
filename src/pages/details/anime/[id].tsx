@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { DetailsComponent, DetailsComponentLoading } from '../../../components';
+import { DetailsComponentAnime, DetailsComponentAnimeLoading } from '../../../components';
 import axios from 'axios';
 
 export default function Details() {
@@ -19,5 +19,9 @@ export default function Details() {
         fetch(`https://api.jikan.moe/v4/anime/${query.id}`);
     }, [query, isReady]);
 
-    return <div>{details ? <DetailsComponent data={details} /> : <DetailsComponentLoading />}</div>;
+    return (
+        <div>
+            {details ? <DetailsComponentAnime data={details} /> : <DetailsComponentAnimeLoading />}
+        </div>
+    );
 }
