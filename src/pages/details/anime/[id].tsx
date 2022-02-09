@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { DetailsComponent, DetailsComponentLoading } from '../../components';
+import { DetailsComponent, DetailsComponentLoading } from '../../../components';
 import axios from 'axios';
 
 export default function Details() {
