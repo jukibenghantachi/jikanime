@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Card, CardLoading } from '../components';
+import { Card, CardLoading, SEO } from '../components';
 import { fetch } from '../utils/fetch';
 
 export default function Home() {
@@ -52,6 +52,12 @@ export default function Home() {
 
     return (
         <div>
+            <SEO
+                title="Home"
+                url="https://jikanime.vercel.app"
+                description="MyAnimeList - Minimal UI"
+                image="https://jikan.moe/assets/images/logo/jikan.logo.png"
+            />
             <h1 className="my-5 text-2xl font-medium text-gray-800">New Anime</h1>
             <div className="my-3 flex flex-wrap justify-between gap-5">
                 {newAnime

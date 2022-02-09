@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { SEO } from '..';
 
 export default function DetailsComponentAnime({ data }) {
     const loopValue = (name) => {
@@ -54,6 +55,12 @@ export default function DetailsComponentAnime({ data }) {
 
     return (
         <div>
+            <SEO
+                title={data.title}
+                url={'details/anime/' + data.mal_id}
+                description={data.synopsis}
+                image={data.images.webp.large_image_url}
+            />
             <div className="flex justify-center">
                 <Image
                     src={data.images.webp.large_image_url}
