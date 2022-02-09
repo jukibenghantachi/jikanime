@@ -1,8 +1,19 @@
 import Card from './Card/Card';
 import CardLoading from './Card/CardLoading';
-import DetailsComponent from './Details/DetailsComponent';
-import DetailsComponentLoading from './Details/DetailsComponentLoading';
+import DetailsComponentAnime from './DetailsAnime/DetailsComponent';
+import DetailsComponentAnimeLoading from './DetailsAnime/DetailsComponentLoading';
+import DetailsComponentManga from './DetailsManga/DetailsComponent';
+import DetailsComponentMangaLoading from './DetailsManga/DetailsComponentLoading';
 import Footer from './Footer/Footer';
 import Navbar from './Navbar/Navbar';
 
-export { Card, CardLoading, DetailsComponent, DetailsComponentLoading, Footer, Navbar };
+export {
+    Card,
+    CardLoading,
+    DetailsComponentAnime,
+    DetailsComponentAnimeLoading,
+    DetailsComponentManga,
+    DetailsComponentMangaLoading,
+    Footer,
+    Navbar,
+};
