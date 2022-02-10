@@ -1,22 +1,22 @@
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { DetailsComponentAnime, DetailsComponentAnimeLoading } from '../../../components';
-import axios from 'axios';
+
+import { useDispatch, useSelector } from 'react-redux';
+import { animeDetailsFetch } from '../../../redux/features/anime/AnimeDetails';
+import { RootState } from '../../../redux/store';
 
 export default function Details() {
     let { query, isReady } = useRouter();
-    let [details, setDetails] = useState();
 
-    const fetch = async (url: string) => {
-        const res = await axios.get(url);
-        setDetails(res.data.data);
-    };
+    const dispatch = useDispatch();
+    const details = useSelector((state: RootState) => state.animeDetails.data.data);
 
     useEffect(() => {
         // Use isReady if query is undefined
         // https://github.com/vercel/next.js/discussions/11484#discussioncomment-356055
         if (!isReady) return;
-        fetch(`https://api.jikan.moe/v4/anime/${query.id}`);
+        dispatch(animeDetailsFetch(query.id));
     }, [query, isReady]);
 
     return (

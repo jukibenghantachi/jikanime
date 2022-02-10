@@ -10,7 +10,7 @@ export default function Navbar() {
         },
         {
             name: 'Anime',
-            route: '/list',
+            route: '/',
         },
         {
             name: 'Manga',

@@ -1,15 +1,19 @@
+import { Provider } from 'react-redux';
 import { Footer, Navbar } from '../components';
+import store from '../redux/store';
 import '../assets/css/tailwind.css';
 
 function Components({ Component, pageProps }) {
     return (
-        <div className="font-montserrat">
-            <Navbar />
-            <div className="my-20 mx-12">
-                <Component {...pageProps} />
+        <Provider store={store}>
+            <div className="font-montserrat">
+                <Navbar />
+                <div className="my-20 mx-12">
+                    <Component {...pageProps} />
+                </div>
+                <Footer />
             </div>
-            <Footer />
-        </div>
+        </Provider>
     );
 }
 
