@@ -17,7 +17,7 @@ export default function Home() {
         if (status.new.status && status.latest.status) return;
         dispatch(fetchLatest());
         dispatch(fetchNew());
-    }, [dispatch]);
+    }, [status.new.status, status.latest.status, dispatch]);
 
     return (
         <div>

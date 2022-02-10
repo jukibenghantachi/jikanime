@@ -14,7 +14,7 @@ export default function Home() {
     useEffect(() => {
         if (status.manga.status) return;
         dispatch(fetchTop());
-    }, [dispatch]);
+    }, [status.manga.status, dispatch]);
 
     return (
         <div>
