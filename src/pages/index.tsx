@@ -11,8 +11,10 @@ export default function Home() {
     const dispatch = useDispatch();
     const newAnime = useSelector((state: RootState) => state.new.data.data);
     const latestAnime = useSelector((state: RootState) => state.latest.data.data);
+    const status = useSelector((state: RootState) => state);
 
     useEffect(() => {
+        if (status.new.status && status.latest.status) return;
         dispatch(fetchLatest());
         dispatch(fetchNew());
     }, [dispatch]);

@@ -9,8 +9,10 @@ import { RootState } from '../../redux/store';
 export default function Home() {
     const dispatch = useDispatch();
     const manga = useSelector((state: RootState) => state.manga.data.data);
+    const status = useSelector((state: RootState) => state);
 
     useEffect(() => {
+        if (status.manga.status) return;
         dispatch(fetchTop());
     }, [dispatch]);
 
