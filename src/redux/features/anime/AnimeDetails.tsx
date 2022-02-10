@@ -11,6 +11,7 @@ const slice = createSlice({
     extraReducers: {
         [animeDetailsFetch.pending as any]: (state) => {
             state.status = false;
+            state.data = { data: '' };
         },
         [animeDetailsFetch.fulfilled as any]: (state, { payload }) => {
             state.status = true;
@@ -18,6 +19,7 @@ const slice = createSlice({
         },
         [animeDetailsFetch.rejected as any]: (state) => {
             state.status = false;
+            state.data = { data: '' };
         },
     },
 });

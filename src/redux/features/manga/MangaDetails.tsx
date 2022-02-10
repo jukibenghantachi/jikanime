@@ -11,6 +11,7 @@ const slice = createSlice({
     extraReducers: {
         [mangaDetailsFetch.pending as any]: (state) => {
             state.status = false;
+            state.data = { data: '' };
         },
         [mangaDetailsFetch.fulfilled as any]: (state, { payload }) => {
             state.status = true;
@@ -18,6 +19,7 @@ const slice = createSlice({
         },
         [mangaDetailsFetch.rejected as any]: (state) => {
             state.status = false;
+            state.data = { data: '' };
         },
     },
 });
