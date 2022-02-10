@@ -17,7 +17,7 @@ export default function Details() {
         // https://github.com/vercel/next.js/discussions/11484#discussioncomment-356055
         if (!isReady) return;
         dispatch(mangaDetailsFetch(query.id));
-    }, [query, isReady]);
+    }, [dispatch, query, isReady]);
 
     return (
         <div>
