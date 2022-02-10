@@ -16,7 +16,7 @@ export default function Details() {
         // Use isReady if query is undefined
         // https://github.com/vercel/next.js/discussions/11484#discussioncomment-356055
         if (!isReady) return;
-        dispatch(mangaDetailsFetch(query.id));
+        dispatch(mangaDetailsFetch(query.id.toString()));
     }, [dispatch, query, isReady]);
 
     return (

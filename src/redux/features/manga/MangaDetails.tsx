@@ -1,8 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
-export const mangaDetailsFetch = createAsyncThunk('anime/mangaDetails', async (args) => {
-    return await fetch(`https://api.jikan.moe/v4/manga/${args}`).then((res) => res.json());
-});
+export const mangaDetailsFetch = createAsyncThunk<any, string>(
+    'anime/mangaDetails',
+    async (args) => {
+        return await fetch(`https://api.jikan.moe/v4/manga/${args}`).then((res) => res.json());
+    }
+);
 
 const slice = createSlice({
     name: 'mangaDetails',
