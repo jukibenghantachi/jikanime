@@ -17,7 +17,7 @@ export default function DetailsComponentManga({ data }) {
         },
         {
             name: 'Score',
-            value: data.score,
+            value: data.scored,
         },
         {
             name: 'Type',
@@ -37,7 +37,7 @@ export default function DetailsComponentManga({ data }) {
         },
         {
             name: 'Aired',
-            value: data.published.prop.string,
+            value: data.published.string,
         },
         {
             name: 'Authors',
