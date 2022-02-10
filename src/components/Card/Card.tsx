@@ -21,7 +21,7 @@ export default function Card({ type, data }) {
                     </div>
                 </Link>
             );
-        case 'Latest Updated':
+        case 'Latest':
             return (
                 <Link href={'details/anime/' + data.entry.mal_id} passHref>
                     <div className="group w-32 cursor-pointer">

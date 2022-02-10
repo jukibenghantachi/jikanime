@@ -15,7 +15,7 @@ export default function Home() {
     useEffect(() => {
         dispatch(fetchLatest());
         dispatch(fetchNew());
-    }, []);
+    }, [dispatch]);
 
     return (
         <div>
@@ -44,9 +44,7 @@ export default function Home() {
             <h1 className="my-5 text-2xl font-medium text-gray-800">Latest Updated</h1>
             <div className="my-3 flex flex-wrap justify-between gap-5">
                 {latestAnime.length
-                    ? latestAnime.map((items, id) => (
-                          <Card type="Latest Updated" data={items} key={id} />
-                      ))
+                    ? latestAnime.map((items, id) => <Card type="Latest" data={items} key={id} />)
                     : new Array(8).fill(0).map((_, id) => <CardLoading key={id} />)}
             </div>
         </div>
